@@ -1,0 +1,72 @@
+{
+  "children": [
+    {
+      "Organism.Header": {
+        "children": [
+          {
+            "Atom.Heading": {
+              "size": "h1",
+              "style": "left",
+              "value": "Categories"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Organism.Section": {
+        "children": [
+          {
+            "Molecule.Navigation": {
+              "children": [
+                {
+                  "Atom.Link": {
+                    "text": "What to watch",
+                    "info": "123"
+                  }
+                },
+                {
+                  "Atom.Link": {
+                    "text": "Hot"
+                  }
+                },
+                {
+                  "Atom.Link": {
+                    "text": "Most viewed"
+                  }
+                }
+              ],
+              "events": [
+                "select"
+              ],
+              "callbacks": [
+                null
+              ]
+            }
+          },
+          {
+            "Atom.Text": {
+              "value": "Channels",
+              "style": "tiny margin-top"
+            }
+          },
+          {
+            "Molecule.Navigation": {
+              "children": [
+                {
+                  "Atom.Link": {
+                    "text": "Database"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "id": "filter",
+        "style": "padding"
+      }
+    }
+  ],
+  "id": "options",
+  "method": "prepend"
+}

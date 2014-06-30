@@ -1,0 +1,80 @@
+{
+  "children": [
+    {
+      "Organism.Header": {
+        "children": [
+          {
+            "Molecule.Navigation": {
+              "children": [
+                {
+                  "Atom.Button": {
+                    "events": [
+                      "touch"
+                    ],
+                    "icon": "navicon",
+                    "path": "options"
+                  }
+                }
+              ],
+              "style": "left",
+              "events": [
+                "select"
+              ]
+            }
+          },
+          {
+            "Atom.Heading": {
+              "size": "h1",
+              "text": "Cocina con...",
+              "value": "Devcast"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Molecule.Search": {
+        "children": [],
+        "events": [
+          "change"
+        ],
+        "callbacks": [
+          null
+        ]
+      }
+    },
+    {
+      "Organism.Section": {
+        "children": [
+          {
+            "Molecule.List": {
+              "children": [],
+              "bind": {
+                "entity": "__.Entity.Video",
+                "atom": "Atom.Li",
+                "events": [
+                  "tap"
+                ],
+                "create": true,
+                "update": true,
+                "destroy": true
+              },
+              "events": [
+                "select"
+              ],
+              "callbacks": [
+                "onVideo"
+              ],
+              "id": "list"
+            }
+          }
+        ],
+        "id": "videos"
+      }
+    }
+  ],
+  "id": "main",
+  "events": [
+    "show"
+  ]
+}

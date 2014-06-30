@@ -1,0 +1,57 @@
+{
+  "children": [
+    {
+      "Organism.Header": {
+        "children": [
+          {
+            "Molecule.Navigation": {
+              "children": [
+                {
+                  "Atom.Button": {
+                    "events": [
+                      "touch"
+                    ],
+                    "icon": "back",
+                    "path": "back"
+                  }
+                }
+              ],
+              "style": "left"
+            }
+          },
+          {
+            "Atom.Heading": {
+              "size": "h2",
+              "value": "Video",
+              "id": "title"
+            }
+          },
+          {
+            "Atom.Heading": {
+              "size": "h3",
+              "value": "category",
+              "id": "category"
+            }
+          }
+        ],
+        "id": "header"
+      }
+    },
+    {
+      "Organism.Section": {
+        "children": [
+          {
+            "Atom.Video": {}
+          },
+          {
+            "Molecule.Div": {
+              "children": []
+            }
+          }
+        ],
+        "id": "main"
+      }
+    }
+  ],
+  "id": "video"
+}
