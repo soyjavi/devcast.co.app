@@ -8,25 +8,70 @@ children:
   - Organism.Section:
       children:
         - Molecule.Navigation:
-            children:
-              - Atom.Link:
-                  text: What to watch
-                  info: "123"
-              - Atom.Link:
-                  text: Hot
-              - Atom.Link:
-                  text: Most viewed
             events:
               - select
             callbacks:
-              - null
+              - onContext
+            children:
+              - Atom.Link:
+                  text: What to watch
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Hot
+                  explore: hot
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Most viewed
+                  explore: most_viewed
+                  events:
+                    - touch
+
         - Atom.Text:
             value: Channels
             style: tiny margin-top
         - Molecule.Navigation:
+            events:
+              - select
+            callbacks:
+              - onContext
             children:
               - Atom.Link:
                   text: Database
+                  channel: database
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Design
+                  channel: design
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: JavaScript
+                  channel: javascript
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Mobile
+                  channel: mobile
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: NodeJS
+                  channel: node_js
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Python
+                  channel: python
+                  events:
+                    - touch
+              - Atom.Link:
+                  text: Ruby
+                  channel: ruby
+                  events:
+                    - touch
       id: filter
       style: padding
 id: options
