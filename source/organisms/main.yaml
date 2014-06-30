@@ -21,6 +21,7 @@ children:
 
   - Organism.Section:
       id: videos
+      style: padding
       events:
         - scroll
       children:
@@ -28,7 +29,7 @@ children:
             id: list
             bind:
               entity: __.Entity.Video
-              atom: Atom.Li
+              atom: Atom.Thumbnail
               events:
                 - touch
               create: true
