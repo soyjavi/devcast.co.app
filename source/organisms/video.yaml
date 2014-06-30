@@ -1,27 +1,25 @@
+id: video
 children:
   - Organism.Header:
       children:
         - Molecule.Navigation:
             children:
               - Atom.Button:
-                  events:
-                    - touch
                   icon: back
                   path: back
             style: left
         - Atom.Heading:
+            id: title
             size: h2
             value: Video
-            id: title
         - Atom.Heading:
+            id: category
             size: h3
             value: category
-            id: category
       id: header
   - Organism.Section:
+      id: info
       children:
-        - Atom.Video: {}
+        - Atom.Video:
+            id: video
         - Molecule.Div:
-            children: []
-      id: main
-id: video

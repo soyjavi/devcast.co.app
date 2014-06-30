@@ -1,4 +1,5 @@
 {
+  "id": "video",
   "children": [
     {
       "Organism.Header": {
@@ -8,9 +9,6 @@
               "children": [
                 {
                   "Atom.Button": {
-                    "events": [
-                      "touch"
-                    ],
                     "icon": "back",
                     "path": "back"
                   }
@@ -21,16 +19,16 @@
           },
           {
             "Atom.Heading": {
+              "id": "title",
               "size": "h2",
-              "value": "Video",
-              "id": "title"
+              "value": "Video"
             }
           },
           {
             "Atom.Heading": {
+              "id": "category",
               "size": "h3",
-              "value": "category",
-              "id": "category"
+              "value": "category"
             }
           }
         ],
@@ -39,19 +37,18 @@
     },
     {
       "Organism.Section": {
+        "id": "info",
         "children": [
           {
-            "Atom.Video": {}
+            "Atom.Video": {
+              "id": "video"
+            }
           },
           {
-            "Molecule.Div": {
-              "children": []
-            }
+            "Molecule.Div": null
           }
-        ],
-        "id": "main"
+        ]
       }
     }
-  ],
-  "id": "video"
+  ]
 }

@@ -1,4 +1,5 @@
 {
+  "id": "main",
   "children": [
     {
       "Organism.Header": {
@@ -8,9 +9,6 @@
               "children": [
                 {
                   "Atom.Button": {
-                    "events": [
-                      "touch"
-                    ],
                     "icon": "navicon",
                     "path": "options"
                   }
@@ -34,29 +32,28 @@
     },
     {
       "Molecule.Search": {
-        "children": [],
         "events": [
           "change"
-        ],
-        "callbacks": [
-          null
         ]
       }
     },
     {
       "Organism.Section": {
+        "id": "videos",
+        "events": [
+          "scroll"
+        ],
         "children": [
           {
             "Molecule.List": {
-              "children": [],
+              "id": "list",
               "bind": {
                 "entity": "__.Entity.Video",
                 "atom": "Atom.Li",
                 "events": [
-                  "tap"
+                  "touch"
                 ],
                 "create": true,
-                "update": true,
                 "destroy": true
               },
               "events": [
@@ -64,17 +61,11 @@
               ],
               "callbacks": [
                 "onVideo"
-              ],
-              "id": "list"
+              ]
             }
           }
-        ],
-        "id": "videos"
+        ]
       }
     }
-  ],
-  "id": "main",
-  "events": [
-    "show"
   ]
 }

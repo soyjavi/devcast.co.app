@@ -2,27 +2,29 @@ class Atoms.Organism.Main extends Atoms.Organism.Article
 
   @scaffold "assets/scaffold/main.json"
 
-  constructor: ->
+  render: ->
     super
-    @bind "show", @onShow
+    do @fetch
 
-
+  # ============================================================================
   # Instance events
-  onShow: ->
-    # Your code...
+  # ============================================================================
+  fetch: (context = "index")->
+    __.proxy("GET", context).then (error, response) ->
+      unless response.videos.length is 0
+        __.Entity.Video.create video for video in response.videos
 
-
+  # ============================================================================
   # Children bubble events
-  onButtonTouch: (event, dispatcher, hierarchy...) ->
-    # Your code...
-
-  onNavigationSelect: (event, dispatcher, hierarchy...) ->
-    # Your code...
-
+  # ============================================================================
   onSearchChange: (event, dispatcher, hierarchy...) ->
-    # Your code...
+    console.log "onSearchChange", dispatcher.value()
 
   onVideo: (event, dispatcher, hierarchy...) ->
-    # Your code...
+    __.Article.Video.show event.entity
+
+  # ============================================================================
+  # Private methods
+  # ============================================================================
 
 new Atoms.Organism.Main()
