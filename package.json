@@ -4,17 +4,16 @@
   "description"     : "App for devcast",
   "author"          : "undefined <undefined>",
   "homepage"        : "http://tapquo.com",
-  "license"         : {
-    "type": "MIT"
-  },
+  "license"         : "MIT",
   "devDependencies" : {
-    "grunt-contrib-coffee"  : "*",
-    "grunt-contrib-stylus"  : "*",
-    "grunt-contrib-concat"  : "*",
-    "grunt-contrib-uglify"  : "*",
-    "grunt-contrib-watch"   : "*",
-    "grunt-contrib-copy"    : "*",
-    "grunt-notify"          : "*",
-    "grunt-yaml"            : "*"
+    "gulp"        : "*",
+    "gulp-coffee" : "*",
+    "gulp-concat" : "*",
+    "gulp-connect": "*",
+    "gulp-header" : "*",
+    "gulp-jasmine": "*",
+    "gulp-stylus" : "*",
+    "gulp-uglify" : "*",
+    "gulp-yml"    : "*"
   }
 }
