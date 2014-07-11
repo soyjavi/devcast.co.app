@@ -22,7 +22,7 @@ children:
   - Organism.Section:
       id: info
       children:
-        - Atom.Video:
+        - Atom.Iframe:
             id: video
         - Molecule.Div:
             id: field
@@ -35,4 +35,4 @@ children:
                   style: margin-bottom
               - Atom.Text:
                   id: description
-                  style: small align justify
+                  style: tiny
